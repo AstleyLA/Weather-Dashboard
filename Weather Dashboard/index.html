@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div class="container mx-auto my-10 flex flex-col items-center">
+        <div class="rounded-lg overflow-hidden bg-gradient-to-b from-blue-500 to-blue-300 text-white">
+            <h1 class="text-4xl font-bold mb-8 text-center p-4">Weather App</h1>
+            <div class="p-4">
+                <input type="text" id="locationInput" placeholder="Enter a city" class=" text-black px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 mb-4" autocomplete="off">
+                <button id="submitButton" class="bg-white hover:bg-gray-200 py-2 px-4 rounded text-black">Submit</button>
+            </div>
+            <div class="weather-info p-4 rounded-b-lg">
+                <h2 id="location" class="text-2xl font-semibold mb-2"></h2>
+                <p id="temperature" class="text-xl mb-2"></p>
+                <p id="humidity" class="text-lg mb-2"></p>
+                <p id="windSpeed" class="text-lg mb-4"></p>
+                <!-- hide weather icon to stop it showing before a city is entered -->
+                <img id="weatherIcon" alt="Weather Icon" class="w-20 hidden">
+                <p id="weatherCondition" class="mt-2"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
